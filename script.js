@@ -1,3 +1,4 @@
+//Array de productos
 const productos=[
     {nombre:"Pan", precio: 240},
     {nombre:"Facturas", precio: 80},
@@ -10,15 +11,18 @@ const productos=[
     {nombre:"Grisines", precio: 120},
 ];
 
+//Array vacio, donde se va a ir pusheando todos los productos que el usuario desee comprar.
 let carrito = []
 
 let seleccion = prompt("Bienvenidos a nuestra tienda online, desea comprar algun producto si o no");
 
+//Bucle que utilizado para poder avanzar en el proceso, dependiendo si el usuario ingresa si o no
 while(seleccion != "si" && seleccion != "no"){
     alert("Desea comprar algun producto, ingrese si o no")
     seleccion=prompt("Ingrese si o no")
 }
 
+//Determino que pasa si el usuario responde por si. Recorro el array productos para mostrar la lista de productos.
 if (seleccion =="si"){
     alert("A continuación nuestra lista de productos");
     let todoslosProductos = productos.map((producto)=>producto.nombre + " " + "$" + producto.precio);
@@ -27,10 +31,12 @@ if (seleccion =="si"){
     alert("Gracias por su visita");
 }
 
+//Una vez que el usuario responde si, y vio la lista de productos, le doy la opción de agregar productos.
 while(seleccion != "no"){
     let producto = prompt("Agrega un producto a tu carrito");
     let precio = 0
 
+//Valido los productos, que me coincida lo q ingresa el usuario con la lista que yo tengo.
     if(producto == "Pan" || producto == "Facturas" || producto == "Pebetes" || producto == "Bizcochos" || producto == "Hamburguesas" ||
     producto == "Pan de miga" || producto == "Prepizzas" || producto == "Pan rallado" || producto == "Grisines"){
         switch (producto) {
@@ -66,7 +72,7 @@ while(seleccion != "no"){
             break;
 
             }
-
+//Guardo todo lo que elijio el usuario en el array carrito.
                 let unidades = parseInt(prompt("¿Cuantas unidades quiere llevar?"));
                 carrito.push({producto, unidades, precio});                       
                 console.log(carrito);
