@@ -2,6 +2,7 @@ const shopContent = document.getElementById("shopContent");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modalContainer");
 
+//array productos
 const productos = [
     {
         id: 1,
@@ -25,21 +26,21 @@ const productos = [
         cantidad: 1,
     },  
     {
-        id: 5,
+        id: 4,
         nombre: "Hamburguesas",
         precio: 70,
         img: "./imagenes/Pan de hamburguesa.jfif",
         cantidad: 1,
     },  
     {
-        id: 6,
+        id: 5,
         nombre: "Pan de miga",
         precio: 350,
         img: "./imagenes/Pandemiga.jpg",
         cantidad: 1,
     },  
     {
-        id: 7,
+        id: 6,
         nombre: "Pre pizzas",
         precio: 150,
         img:"./imagenes/Prepizza.png" ,
@@ -47,13 +48,12 @@ const productos = [
     },  
 
     {
-        id: 8,
+        id: 7,
         nombre: "Pan rallado",
         precio: 65,
         img:"./imagenes/Pan_Rallado.jpg" ,
         cantidad: 1,
-    }, 
-   
+    },  
 ];
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -103,7 +103,7 @@ comprar.addEventListener("click", () => {
 });
 });
 
-//verCarrito.addEventListener("click", ()=>{
+
     const pintarCarrito=()=>{
 
     modalContainer.innerHTML="";
@@ -155,7 +155,7 @@ comprar.addEventListener("click", () => {
     
 }
     
-//});
+
 
 verCarrito.addEventListener("click", pintarCarrito);
 
