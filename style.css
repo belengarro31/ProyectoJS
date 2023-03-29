@@ -157,3 +157,25 @@ h2{
     padding-top: 20px;
     color: aliceblue;
 }
+
+#cargar{
+    margin: auto;
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 1.5rem;
+}
+
+.mt-5 p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+img{
+    margin: auto;
+    display: block;
+}
+
+.delete-product{
+    cursor: pointer;
+}
